@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Modal from './modal'; // Import your Modal component
 import { useInView } from 'react-intersection-observer';
 import ImageItem from './lowerComponents/imageItem';
+import Text from './lowerComponents/text';
 
 interface WorksProps {
   containerRef: React.RefObject<HTMLElement>;
@@ -12,7 +13,7 @@ const Works: React.FC<WorksProps> = ({ containerRef }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1 // Procent widoczności elementu w viewport
+    threshold: 0.1 
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');

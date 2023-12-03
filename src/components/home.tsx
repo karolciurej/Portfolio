@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useTransform} from 'framer-motion'
 import { useRef } from 'react';
+import Text from './lowerComponents/text';
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -10,7 +11,7 @@ const Home = () => {
   return (
     <div className='h-screen  w-screen bg-black snap-center overflow-x-scroll flex-shrink-0 min-w-[1600px]' >
       <motion.h1  className='text-[180px] w-3/3 ml-12 text-white relative'ref={containerRef} >
-        HI I'M KAROL!!
+        <Text text="HI I'M KAROL!!"></Text>
         <motion.span
             style={{
                 borderRadius: 30,
@@ -19,6 +20,12 @@ const Home = () => {
                 scale,
                 rotate,
                 cursor: "grab"
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                duration: 0.25,
+                delay: 2
             }}
             className='text-yellow'
             drag="x"

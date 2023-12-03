@@ -38,7 +38,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ url, title, onImageClick, index, 
       whileTap={{ scale: 0.8 }}
       src={url}
       alt={title}
-      className='lg:w-full w-5/6  m-auto aspect-[4/3] rounded-lg'
+      className=' w-5/6  m-auto aspect-[4/3] rounded-lg'
       onClick={() => onImageClick(url, index)}
     />
   );
