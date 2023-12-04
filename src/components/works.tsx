@@ -3,11 +3,12 @@ import { motion, useAnimation } from 'framer-motion';
 import Modal from './modal'; // Import your Modal component
 import { useInView } from 'react-intersection-observer';
 import ImageItem from './lowerComponents/imageItem';
-import Text from './lowerComponents/text';
+import Dots from './lowerComponents/dots';
 
 interface WorksProps {
   containerRef: React.RefObject<HTMLElement>;
 }
+
 
 const Works: React.FC<WorksProps> = ({ containerRef }) => {
   const controls = useAnimation();
@@ -89,7 +90,11 @@ const Works: React.FC<WorksProps> = ({ containerRef }) => {
        <div className='hidden lg:block'>
         <motion.div className='grid grid-cols-3 grid-rows-2 h-screen'>
           {imageUrls.map((url, index) =>
-            index === imageUrls.length - 1 ? (<div key={index} className='lg:w-5/6 w-80 text-5xl grid place-items-center'>I hope more</div>) : (
+            index === imageUrls.length - 1 ? 
+            (<div key={index} className='lg:w-5/6 w-80 text-5xl flex items-center justify-center gap-2'>
+                Creating more <Dots></Dots>
+              </div>) 
+            : (
               <ImageItem
                 key={index}
                 url={url}

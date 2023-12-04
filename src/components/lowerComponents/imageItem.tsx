@@ -10,6 +10,8 @@ interface ImageItemProps {
   isVisible: boolean
 }
 
+
+
 const ImageItem: React.FC<ImageItemProps> = ({ url, title, onImageClick, index, isVisible }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({

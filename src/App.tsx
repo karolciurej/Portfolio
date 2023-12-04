@@ -1,4 +1,3 @@
-// App.js
 import { useRef, useEffect } from 'react';
 import Home from './components/home';
 import Works from './components/works';

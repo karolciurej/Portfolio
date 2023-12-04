@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 
 interface TextProps {
-    text: string
+    text: string,
+    delay: number,
+    time: number
 }
 
-const Text: React.FC<TextProps> = ({ text }) => {
+const Text: React.FC<TextProps> = ({ text, delay, time }) => {
     const arr = text.split("")
     return (
         <span >
@@ -14,7 +16,7 @@ const Text: React.FC<TextProps> = ({ text }) => {
                     animate={{ opacity: 1 }}
                     transition={{
                         duration: 0.25,
-                        delay: i / 10
+                        delay: delay + time/arr.length * i
                     }}
                     key={i}
                 >
