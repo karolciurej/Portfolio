@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform } from 'framer-motion'
 import { useRef } from 'react';
-import Text from './lowerComponents/text';
+import Text from './components/text';
 
 const Home = () => {
   const containerRef = useRef(null);

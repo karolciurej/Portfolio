@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
-import Home from './components/home';
-import Works from './components/works';
-import About from './components/about';
+import Home from './root/home';
+import Works from './root/works';
+import About from './root/about';
 import { useScroll } from 'framer-motion';
 
 const App = () => {

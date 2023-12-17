@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Modal from './modal'; // Import your Modal component
 import { useInView } from 'react-intersection-observer';
-import ImageItem from './lowerComponents/imageItem';
-import Dots from './lowerComponents/dots';
+import ImageItem from './components/imageItem';
+import Dots from './components/dots';
 
 interface WorksProps {
   containerRef: React.RefObject<HTMLElement>;
