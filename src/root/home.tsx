@@ -9,7 +9,7 @@ const Home = () => {
   const rotate = useTransform(x, [-150, 150], [-90, 90]);
   console.log(x)
   return (
-    <div className='h-screen  w-screen bg-black snap-center overflow-x-scroll flex-shrink-0  flex flex-col gap-12' >
+    <div className='h-screen  w-screen bg-black snap-center  flex-shrink-0  flex flex-col gap-12' >
       <motion.h1 className='lg:text-[220px] md:text-9xl text-8xl w-3/3 ml-12 text-white relative mt-8' ref={containerRef} >
         <Text text="HI I'M KAROL!!" delay={0} time={1.5}></Text>
         <motion.span
