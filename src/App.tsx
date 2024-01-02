@@ -12,7 +12,7 @@ const App = () => {
   }, []);
   return (
     <>
-      <div ref={containerRef} className='flex flex-col lg:flex-row lg:snap-x snap-y snap-mandatory w-full'>
+      <div ref={containerRef} className='flex flex-col lg:flex-row overflow-x-auto lg:snap-x snap-y snap-mandatory w-full'>
         <Home />
         <Works containerRef={containerRef} />
         <About />
